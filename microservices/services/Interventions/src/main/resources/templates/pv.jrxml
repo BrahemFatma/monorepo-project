@@ -1,0 +1,175 @@
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="fiche_intervention" pageWidth="595" pageHeight="842" columnWidth="555"
+              leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e19bcae7-9acb-44ec-9f13-d9f2c4c9ccf7">
+
+    <!-- Parameters -->
+    <parameter name="Client" class="java.lang.String"/>
+    <parameter name="DateVisite" class="java.lang.String"/>
+    <parameter name="HeureDebut" class="java.lang.String"/>
+    <parameter name="HeureFin" class="java.lang.String"/>
+    <parameter name="Intervenant" class="java.lang.String"/>
+    <parameter name="Objectifs" class="java.lang.String"/>
+    <parameter name="Actions" class="java.lang.String"/>
+    <parameter name="Ordonnancement" class="java.lang.String"/>
+    <parameter name="LOGO_PATH" class="java.lang.String"/>
+    <parameter name="TypeIntervention" class="java.lang.String"/>
+    <parameter name="MoyenIntervention" class="java.lang.String"/>
+    <parameter name="CategorieIntervention" class="java.lang.String"/>
+    <parameter name="NatureIntervention" class="java.lang.String"/>
+    <parameter name="AccesDev" class="java.lang.String"/>
+    <parameter name="Facturation" class="java.lang.String"/>
+    <parameter name="ObservationFacturation" class="java.lang.String"/>
+
+    <!-- Fields -->
+    <field name="Utilisateur" class="java.lang.String"/>
+    <field name="Service" class="java.lang.String"/>
+    <field name="Points" class="java.lang.String"/>
+
+    <!-- Title -->
+    <title>
+        <band height="90">
+
+            <!-- ✅ LOGO -->
+            <image>
+                <reportElement x="0" y="0" width="100" height="80"/>
+                <imageExpression><![CDATA[new java.io.File($P{LOGO_PATH}).getAbsolutePath()]]></imageExpression>
+            </image>
+
+            <!-- ✅ TEXTE DU TITRE -->
+            <staticText>
+                <reportElement x="50" y="10" width="455" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text>Fiche d'intervention</text>
+            </staticText>
+
+        </band>
+    </title>
+
+
+    <!-- Page Header -->
+    <pageHeader>
+        <band height="420">
+
+            <staticText><reportElement x="0" y="0" width="100" height="20"/><text>Client</text></staticText>
+            <textField><reportElement x="100" y="0" width="200" height="20"/><textFieldExpression><![CDATA[$P{Client}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="320" y="0" width="100" height="20"/><text>Date de la visite</text></staticText>
+            <textField><reportElement x="420" y="0" width="120" height="20"/><textFieldExpression><![CDATA[$P{DateVisite}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="25" width="100" height="20"/><text>Heure début visite</text></staticText>
+            <textField><reportElement x="100" y="25" width="100" height="20"/><textFieldExpression><![CDATA[$P{HeureDebut}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="210" y="25" width="100" height="20"/><text>Heure fin visite</text></staticText>
+            <textField><reportElement x="310" y="25" width="100" height="20"/><textFieldExpression><![CDATA[$P{HeureFin}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="50" width="120" height="20"/><text>Intervenants GPRO</text></staticText>
+            <textField><reportElement x="120" y="50" width="300" height="20"/><textFieldExpression><![CDATA[$P{Intervenant}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="70" width="150" height="20"/><text>Type intervention</text></staticText>
+            <textField><reportElement x="150" y="70" width="200" height="20"/><textFieldExpression><![CDATA[$P{TypeIntervention}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="90" width="150" height="20"/><text>Moyen intervention</text></staticText>
+            <textField><reportElement x="150" y="90" width="200" height="20"/><textFieldExpression><![CDATA[$P{MoyenIntervention}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="110" width="150" height="20"/><text>Catégorie intervention</text></staticText>
+            <textField><reportElement x="150" y="110" width="200" height="20"/><textFieldExpression><![CDATA[$P{CategorieIntervention}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="130" width="150" height="20"/><text>Nature intervention</text></staticText>
+            <textField><reportElement x="150" y="130" width="200" height="20"/><textFieldExpression><![CDATA[$P{NatureIntervention}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="150" width="150" height="20"/><text>Accès DEV</text></staticText>
+            <textField><reportElement x="150" y="150" width="200" height="20"/><textFieldExpression><![CDATA[$P{AccesDev}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="170" width="150" height="20"/><text>Facturation</text></staticText>
+            <textField><reportElement x="150" y="170" width="200" height="20"/><textFieldExpression><![CDATA[$P{Facturation}]]></textFieldExpression></textField>
+
+            <staticText><reportElement x="0" y="190" width="150" height="20"/><text>Observation facturation</text></staticText>
+            <textField><reportElement x="150" y="190" width="400" height="20"/><textFieldExpression><![CDATA[$P{ObservationFacturation}]]></textFieldExpression></textField>
+            <staticText>
+                <reportElement x="0" y="220" width="555" height="20"/>
+                <textElement textAlignment="Center"><font isBold="true"/></textElement>
+                <text>Objectif(s) de la visite :</text>
+            </staticText>
+            <textField isStretchWithOverflow="true">
+                <reportElement x="0" y="250" width="555" height="80"/>
+                <textFieldExpression><![CDATA[$P{Objectifs}]]></textFieldExpression>
+            </textField>
+
+            <staticText>
+                <reportElement x="0" y="320" width="555" height="20"/>
+                <textElement textAlignment="Center"><font isBold="true"/></textElement>
+                <text>Actions mises en place :</text>
+            </staticText>
+            <textField isStretchWithOverflow="true">
+                <reportElement x="0" y="340" width="555" height="50"/>
+                <textFieldExpression><![CDATA[$P{Actions}]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </pageHeader>
+
+    <columnHeader>
+        <band height="52">
+            <staticText>
+                <reportElement x="0" y="30" width="145" height="22"/>
+                <box><pen lineWidth="1.0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text>Utilisateur(s)</text>
+            </staticText>
+            <staticText>
+                <reportElement x="145" y="30" width="155" height="22"/>
+                <box><pen lineWidth="1.0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text>Service</text>
+            </staticText>
+            <staticText>
+                <reportElement x="300" y="30" width="190" height="22"/>
+                <box><pen lineWidth="1.0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text>Point(s) discuté(s)</text>
+            </staticText>
+            <staticText>
+                <reportElement x="490" y="30" width="65" height="22"/>
+                <box><pen lineWidth="1.0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text>Signature</text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <!-- SECTION: Lignes dynamiques du tableau -->
+    <detail>
+        <band height="22">
+            <textField>
+                <reportElement x="0" y="0" width="145" height="22"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{Utilisateur} != null ? $F{Utilisateur} : "Aucune donnée"]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="145" y="0" width="155" height="22"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{Service}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="300" y="0" width="190" height="22"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{Points}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="490" y="0" width="65" height="22"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+</jasperReport>

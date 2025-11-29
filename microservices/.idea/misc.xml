@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/services/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/services/demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/services/discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/services/members/pom.xml" />
+        <option value="$PROJECT_DIR$/services/USERS/pom.xml" />
+        <option value="$PROJECT_DIR$/services/Reunion/pom.xml" />
+        <option value="$PROJECT_DIR$/services/reunions/pom.xml" />
+        <option value="$PROJECT_DIR$/services/REUNION/pom.xml" />
+        <option value="$PROJECT_DIR$/services/Inetrventions/pom.xml" />
+        <option value="$PROJECT_DIR$/services/Intervention/pom.xml" />
+        <option value="$PROJECT_DIR$/services/Interventions/pom.xml" />
+        <option value="$PROJECT_DIR$/services/Routine/pom.xml" />
+        <option value="$PROJECT_DIR$/services/notifications/pom.xml" />
+        <option value="$PROJECT_DIR$/services/getaway/pom.xml" />
+        <option value="$PROJECT_DIR$/services/client/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/services/Inetrventions/pom.xml" />
+        <option value="$PROJECT_DIR$/services/Intervention/pom.xml" />
+        <option value="$PROJECT_DIR$/services/Reunion/pom.xml" />
+        <option value="$PROJECT_DIR$/services/demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/services/members/pom.xml" />
+        <option value="$PROJECT_DIR$/services/reunions/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="22" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

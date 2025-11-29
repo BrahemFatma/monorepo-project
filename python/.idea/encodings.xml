@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/services/Inetrventions/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/Inetrventions/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/Intervention/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/Intervention/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/Interventions/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/Interventions/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/REUNION/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/REUNION/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/Routine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/Routine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/USERS/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/USERS/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/demo1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/discovery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/getaway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/getaway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/members/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/members/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/notifications/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/notifications/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/reunions/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/reunions/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

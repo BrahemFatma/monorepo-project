@@ -1,0 +1,30 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        _ id: USERS-service
+          uri: lb:http://USERS-service
+          predicates:
+          - Path=/api/v1/Users/**
+        _ id: Routine-service
+          uri: lb:http://URoutine-service
+          predicates:
+          - Path=/api/v1/Routines /**
+        _ id: reunions-service
+          uri: lb:http://reunions-service
+          predicates:
+          - Path=/api/v1/Reunions/**
+        _ id: Inetrventions-service
+          uri: lb:http://Inetrventions-service
+          predicates:
+          - Path=/api/v1/Interventions/**
+        _ id: Notification-service
+          uri: lb:http://Notification-service
+          predicates:
+          - Path=/api/v1/Notifications/**
+
+server:
+  port: 8222

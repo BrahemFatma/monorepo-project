@@ -1,0 +1,29 @@
+{
+  "/api": {
+    "target": "http://localhost:8222",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/hello/api": {
+    "target": "http://localhost:8222",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/auth": {
+    "target": "http://localhost:9098",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/convert": {
+    "target": "http://127.0.0.1:5000",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/transcribe": {
+    "target": "http://localhost:5001",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="discovery" />
+        <module name="getaway" />
+      </profile>
+      <profile name="Annotation profile for notifications" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="Routine" />
+        <module name="REUNION" />
+        <module name="Interventions" />
+        <module name="USERS" />
+        <module name="notifications" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo1" target="17" />
+      <module name="Inetrventions" target="17" />
+      <module name="Intervention" target="17" />
+      <module name="members" target="1.5" />
+      <module name="projet-communs" target="1.5" />
+      <module name="Reunion" target="17" />
+      <module name="reunions" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Inetrventions" options="-parameters" />
+      <module name="Intervention" options="-parameters" />
+      <module name="Interventions" options="-parameters" />
+      <module name="REUNION" options="-parameters" />
+      <module name="Reunion" options="-parameters" />
+      <module name="Routine" options="-parameters" />
+      <module name="USERS" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="demo1" options="-parameters" />
+      <module name="discovery" options="-parameters" />
+      <module name="getaway" options="-parameters" />
+      <module name="notifications" options="-parameters" />
+      <module name="reunions" options="-parameters" />
+    </option>
+  </component>
+</project>

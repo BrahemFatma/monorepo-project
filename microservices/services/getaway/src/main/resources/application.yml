@@ -1,0 +1,50 @@
+spring:
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: USERS-service
+          uri: lb://USERS-service
+          predicates:
+            - Path=/api/v1/Users/**
+
+        - id: Routine-service
+          uri: lb://Routine-service
+          predicates:
+            - Path=/api/v1/Routines/**
+
+        - id: reunions-service
+          uri: lb://reunions-service
+          predicates:
+            - Path=/api/v1/Reunions/**
+
+        - id: Interventions-service
+          uri: lb://Interventions-service
+          predicates:
+            - Path=/api/v1/Interventions/**
+
+        - id: Notification-service
+          uri: lb://Notification-service
+          predicates:
+            - Path=/api/v1/Notifications/**
+
+        - id: client-service
+          uri: lb://client-service
+          predicates:
+            - Path=/api/v1/Client/**
+
+  config:
+    import: optional:configserver:http://config-server:8888
+
+  application:
+    name: getaway-service
+server:
+  port: 8222
+management:
+  tracing:
+    sampling:
+      probability: 1.0

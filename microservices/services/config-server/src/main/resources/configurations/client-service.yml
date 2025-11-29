@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/clients
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8020
+application:
+  config:
+    users-url: http://localhost:8090/api/v1/Users
+    reunions-url: http://localhost:8010/api/v1/Reunions
+    Interventions-url: http://localhost:8030/api/v1/Interventions
+    Notifications-url: http://localhost:8050/api/v1/Notifications
+    Routine-url: http://localhost:8060/api/v1/Routines
+    client-url: http://localhost:8020/api/v1/Client

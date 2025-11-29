@@ -1,0 +1,60 @@
+spring:
+  main:
+    web-application-type: reactive
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9098/realms/micro-services
+
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+            maxAge: 3600
+            allowCredentials: true
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: USERS-service
+          uri: lb://USERS-service
+          predicates:
+            - Path=/api/v1/Users/**
+
+        - id: Routine-service
+          uri: lb://Routine-service
+          predicates:
+            - Path=/api/v1/Routines/**
+
+        - id: reunions-service
+          uri: lb://reunions-service
+          predicates:
+            - Path=/api/v1/Reunions/**
+
+        - id: Interventions-service
+          uri: lb://Interventions-service
+          predicates:
+            - Path=/api/v1/Interventions/**
+
+        - id: Notification-service
+          uri: lb://Notification-service
+          predicates:
+            - Path=/api/v1/Notifications/**
+
+        - id: client-service
+          uri: lb://client-service
+          predicates:
+            - Path=/api/v1/Client/**
+
+server:
+  port: 8222
